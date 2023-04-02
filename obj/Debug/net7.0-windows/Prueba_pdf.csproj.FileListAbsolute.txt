@@ -1,0 +1,17 @@
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\bin\Debug\net7.0-windows\Prueba_pdf.exe
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\bin\Debug\net7.0-windows\Prueba_pdf.deps.json
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\bin\Debug\net7.0-windows\Prueba_pdf.runtimeconfig.json
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\bin\Debug\net7.0-windows\Prueba_pdf.dll
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\bin\Debug\net7.0-windows\Prueba_pdf.pdb
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\obj\Debug\net7.0-windows\Prueba_pdf.csproj.AssemblyReference.cache
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\obj\Debug\net7.0-windows\Prueba_pdf.Form1.resources
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\obj\Debug\net7.0-windows\Prueba_pdf.csproj.GenerateResource.cache
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\obj\Debug\net7.0-windows\Prueba_pdf.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\obj\Debug\net7.0-windows\Prueba_pdf.AssemblyInfoInputs.cache
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\obj\Debug\net7.0-windows\Prueba_pdf.AssemblyInfo.cs
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\obj\Debug\net7.0-windows\Prueba_pdf.csproj.CoreCompileInputs.cache
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\obj\Debug\net7.0-windows\Prueba_pdf.dll
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\obj\Debug\net7.0-windows\refint\Prueba_pdf.dll
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\obj\Debug\net7.0-windows\Prueba_pdf.pdb
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\obj\Debug\net7.0-windows\Prueba_pdf.genruntimeconfig.cache
+D:\PROYECTOS_VS\Prueba_pdf\Prueba_pdf\obj\Debug\net7.0-windows\ref\Prueba_pdf.dll
