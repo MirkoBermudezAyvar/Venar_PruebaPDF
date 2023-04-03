@@ -36,6 +36,10 @@
             hola2ToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1 = new MenuStrip();
             hola1ToolStripMenuItem1 = new ToolStripMenuItem();
+            mantenimientoDePlantillasToolStripMenuItem = new ToolStripMenuItem();
+            mantenimientoDeUsuariosToolStripMenuItem = new ToolStripMenuItem();
+            cerrarSesiónToolStripMenuItem = new ToolStripMenuItem();
+            salirToolStripMenuItem = new ToolStripMenuItem();
             hola2ToolStripMenuItem1 = new ToolStripMenuItem();
             hi2ToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
@@ -53,10 +57,6 @@
             bindingSource1 = new BindingSource(components);
             treeView1 = new TreeView();
             listView1 = new ListView();
-            mantenimientoDePlantillasToolStripMenuItem = new ToolStripMenuItem();
-            mantenimientoDeUsuariosToolStripMenuItem = new ToolStripMenuItem();
-            cerrarSesiónToolStripMenuItem = new ToolStripMenuItem();
-            salirToolStripMenuItem = new ToolStripMenuItem();
             contextMenuStrip1.SuspendLayout();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -111,6 +111,31 @@
             hola1ToolStripMenuItem1.Name = "hola1ToolStripMenuItem1";
             hola1ToolStripMenuItem1.Size = new Size(60, 20);
             hola1ToolStripMenuItem1.Text = "Archivo";
+            // 
+            // mantenimientoDePlantillasToolStripMenuItem
+            // 
+            mantenimientoDePlantillasToolStripMenuItem.Name = "mantenimientoDePlantillasToolStripMenuItem";
+            mantenimientoDePlantillasToolStripMenuItem.Size = new Size(222, 22);
+            mantenimientoDePlantillasToolStripMenuItem.Text = "Mantenimiento de Plantillas";
+            mantenimientoDePlantillasToolStripMenuItem.Click += mantenimientoDePlantillasToolStripMenuItem_Click;
+            // 
+            // mantenimientoDeUsuariosToolStripMenuItem
+            // 
+            mantenimientoDeUsuariosToolStripMenuItem.Name = "mantenimientoDeUsuariosToolStripMenuItem";
+            mantenimientoDeUsuariosToolStripMenuItem.Size = new Size(222, 22);
+            mantenimientoDeUsuariosToolStripMenuItem.Text = "Mantenimiento de Usuarios";
+            // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            cerrarSesiónToolStripMenuItem.Size = new Size(222, 22);
+            cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
+            // 
+            // salirToolStripMenuItem
+            // 
+            salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            salirToolStripMenuItem.Size = new Size(222, 22);
+            salirToolStripMenuItem.Text = "Salir";
             // 
             // hola2ToolStripMenuItem1
             // 
@@ -214,30 +239,6 @@
             listView1.TabIndex = 9;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.ItemActivate += listView1_ItemActivate_1;
-            // 
-            // mantenimientoDePlantillasToolStripMenuItem
-            // 
-            mantenimientoDePlantillasToolStripMenuItem.Name = "mantenimientoDePlantillasToolStripMenuItem";
-            mantenimientoDePlantillasToolStripMenuItem.Size = new Size(222, 22);
-            mantenimientoDePlantillasToolStripMenuItem.Text = "Mantenimiento de Plantillas";
-            // 
-            // mantenimientoDeUsuariosToolStripMenuItem
-            // 
-            mantenimientoDeUsuariosToolStripMenuItem.Name = "mantenimientoDeUsuariosToolStripMenuItem";
-            mantenimientoDeUsuariosToolStripMenuItem.Size = new Size(222, 22);
-            mantenimientoDeUsuariosToolStripMenuItem.Text = "Mantenimiento de Usuarios";
-            // 
-            // cerrarSesiónToolStripMenuItem
-            // 
-            cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            cerrarSesiónToolStripMenuItem.Size = new Size(222, 22);
-            cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
-            // 
-            // salirToolStripMenuItem
-            // 
-            salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(222, 22);
-            salirToolStripMenuItem.Text = "Salir";
             // 
             // Form1
             // 

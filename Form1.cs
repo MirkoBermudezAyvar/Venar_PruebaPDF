@@ -1,3 +1,5 @@
+using Microsoft.Data.SqlClient;
+using Prueba_pdf.Formularios;
 using System.Diagnostics;
 using System.Windows.Forms.VisualStyles;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
@@ -7,6 +9,7 @@ namespace Prueba_pdf
     public partial class Form1 : Form
     {
         private string currentDirectory;
+        private static readonly string connectionString = "Data Source=DESKTOP-UFQBKNN\\MIRKO;TrustServerCertificate=True;Initial Catalog=BD_ARCHIVOS_VENAR;User Id=sa;Password=piloto;";
         private void MostrarArchivos(string directorio)
         {
             listView1.Items.Clear();
@@ -156,11 +159,17 @@ namespace Prueba_pdf
 
             }
         }
+
+        private void mantenimientoDePlantillasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Form_Mantenimiento_Plan form2 = new Form_Mantenimiento_Plan();
+            form2.ShowDialog();
+
+
+        }
+
     }
 
 
-
 }
-
-
-
