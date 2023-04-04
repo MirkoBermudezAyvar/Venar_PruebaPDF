@@ -30,6 +30,10 @@
         {
             comboBox1 = new ComboBox();
             label1 = new Label();
+            label2 = new Label();
+            dgtablaplantillas = new DataGridView();
+            label3 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgtablaplantillas).BeginInit();
             SuspendLayout();
             // 
             // comboBox1
@@ -39,6 +43,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 0;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged_1;
             // 
             // label1
             // 
@@ -49,15 +54,48 @@
             label1.TabIndex = 1;
             label1.Text = "Planillas";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.BlueViolet;
+            label2.Location = new Point(732, 21);
+            label2.Name = "label2";
+            label2.Size = new Size(240, 32);
+            label2.TabIndex = 2;
+            label2.Text = "Detalle de Plantillas";
+            // 
+            // dgtablaplantillas
+            // 
+            dgtablaplantillas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgtablaplantillas.Location = new Point(496, 96);
+            dgtablaplantillas.Name = "dgtablaplantillas";
+            dgtablaplantillas.RowTemplate.Height = 25;
+            dgtablaplantillas.Size = new Size(770, 249);
+            dgtablaplantillas.TabIndex = 3;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(12, 96);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 15);
+            label3.TabIndex = 4;
+            label3.Text = "label3";
+            // 
             // Form_Mantenimiento_Plan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1290, 450);
+            Controls.Add(label3);
+            Controls.Add(dgtablaplantillas);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(comboBox1);
             Name = "Form_Mantenimiento_Plan";
             Text = "Form_Mantenimiento_Plan";
+            ((System.ComponentModel.ISupportInitialize)dgtablaplantillas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -66,5 +104,8 @@
 
         private ComboBox comboBox1;
         private Label label1;
+        private Label label2;
+        private DataGridView dgtablaplantillas;
+        private Label label3;
     }
 }
