@@ -124,6 +124,7 @@
             mantenimientoDeUsuariosToolStripMenuItem.Name = "mantenimientoDeUsuariosToolStripMenuItem";
             mantenimientoDeUsuariosToolStripMenuItem.Size = new Size(222, 22);
             mantenimientoDeUsuariosToolStripMenuItem.Text = "Mantenimiento de Usuarios";
+            mantenimientoDeUsuariosToolStripMenuItem.Click += mantenimientoDeUsuariosToolStripMenuItem_Click;
             // 
             // cerrarSesiónToolStripMenuItem
             // 

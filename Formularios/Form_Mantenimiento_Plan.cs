@@ -13,6 +13,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Data;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Prueba_pdf.Formularios
 {
@@ -23,6 +24,7 @@ namespace Prueba_pdf.Formularios
         {
             InitializeComponent();
             LlenarCombo();
+            LlenarActualizarDGVPlantillas();
         }
 
         private void LlenarCombo()
@@ -43,9 +45,11 @@ namespace Prueba_pdf.Formularios
             comboBox1.DisplayMember = "planv_des";
             comboBox1.ValueMember = "plani_id";
             // Agregar un elemento adicional al ComboBox en el índice 0 con el texto deseado
-
-            // Establecer el índice seleccionado en 0
-            comboBox1.SelectedIndex = 0;
+            if (dt.Rows.Count > 0)
+            {
+                // Establecer el índice seleccionado en 0
+                comboBox1.SelectedIndex = 0;
+            }
 
 
         }
@@ -62,7 +66,7 @@ namespace Prueba_pdf.Formularios
             if (int.TryParse(codcombo, out numero))
             {
                 // Consulta para obtener los datos de la tabla
-                string query = "SELECT p.planv_des as Planilla,planidet_anio as Año,planv_ciudad as Ciudad FROM PlantillaPDFDetalle pd inner join PlantillaPDF p " +
+                string query = "SELECT p.planv_des as Planilla,planidet_anio as Año  FROM PlantillaPDFDetalle pd inner join PlantillaPDF p " +
                     " on pd.plani_id=p.plani_id where p.plani_id=" + codcombo;
 
                 // Crear una conexión a la base de datos
@@ -109,6 +113,67 @@ namespace Prueba_pdf.Formularios
 
             }
 
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Obtener los valores a insertar desde los controles del formulario
+            string nomplantilla = txtnomplantilla.Text;
+            // query de insercción 
+            string sql = "INSERT INTO PlantillaPDF (planv_des) VALUES (@nomplantilla)";
+            // Crear la conexión y el comando de inserción
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                // Agregar los parámetros de consulta
+                command.Parameters.AddWithValue("@nomplantilla", nomplantilla);
+
+                // Abrir la conexión y ejecutar la consulta
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+
+            // Actualizar la vista del DataGridView
+            LlenarActualizarDGVPlantillas();
+
+        }
+
+        private void LlenarActualizarDGVPlantillas()
+        {
+            // Consulta para obtener los datos de la tabla
+            string query = "SELECT planv_des as Plantillas from PlantillaPDF";
+
+            // Crear una conexión a la base de datos
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Crear un comando para ejecutar la consulta
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Abrir la conexión a la base de datos
+                    connection.Open();
+
+                    // Crear un DataAdapter para obtener los datos de la tabla
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        // Crear un DataTable para almacenar los datos de la tabla
+                        DataTable dataTable = new DataTable();
+
+                        // Llenar el DataTable con los datos de la tabla
+                        adapter.Fill(dataTable);
+
+                        // Asignar el DataTable al DataGridView
+                        dgvListaPlantillas.DataSource = dataTable;
+                    }
+                }
+            }
+            dgvListaPlantillas.Refresh();
+            txtnomplantilla.Text = string.Empty;
 
         }
     }

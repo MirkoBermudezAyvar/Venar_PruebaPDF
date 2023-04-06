@@ -1,5 +1,6 @@
 using Microsoft.Data.SqlClient;
 using Prueba_pdf.Formularios;
+using Prueba_pdf.Formularios.OCR;
 using System.Diagnostics;
 using System.Windows.Forms.VisualStyles;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
@@ -169,6 +170,12 @@ namespace Prueba_pdf
 
         }
 
+        private void mantenimientoDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_OCR form3 = new Form_OCR();
+            form3.ShowDialog();
+
+        }
     }
 
 
